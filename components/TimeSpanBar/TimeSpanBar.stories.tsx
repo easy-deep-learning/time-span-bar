@@ -12,10 +12,16 @@ const meta: Meta<typeof TimeSpanBar> = {
   argTypes: {
     startDate: { control: "date" },
     endDate: { control: "date" },
-    width: { control: "number" },
-    height: { control: "number" },
-    backgroundColor: { control: "color" },
-    borderRadius: { control: "number" },
+    events: {
+      control: "multi-select",
+      options: ["Event 1", "Event 2", "Event 3", "Event 4"],
+      mapping: {
+        "Event 1": { name: "Event 1", date: new Date("2024-02-15") },
+        "Event 2": { name: "Event 2", date: new Date("2024-04-20") },
+        "Event 3": { name: "Event 3", date: new Date("2024-06-10") },
+        "Event 4": { name: "Event 4", date: new Date("2024-08-30") },
+      },
+    },
   },
 };
 
@@ -25,32 +31,14 @@ type Story = StoryObj<typeof TimeSpanBar>;
 // Basic example
 export const Default: Story = {
   args: {
-    startDate: new Date("2024-01-01"),
-    endDate: new Date("2024-12-31"),
-    width: 300,
-    height: 20,
-  },
-};
-
-// Short time span
-export const ShortTimeSpan: Story = {
-  args: {
-    startDate: new Date("2024-03-01"),
-    endDate: new Date("2024-03-07"),
-    width: 300,
-    height: 20,
-    backgroundColor: "#e0e0e0",
-  },
-};
-
-// Custom styled
-export const CustomStyled: Story = {
-  args: {
-    startDate: new Date("2024-01-01"),
-    endDate: new Date("2024-06-30"),
-    width: 400,
-    height: 30,
-    backgroundColor: "#4CAF50",
-    borderRadius: 15,
+    header: "Хрущёв, Никита Сергеевич",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/c/c5/Bundesarchiv_Bild_183-B0628-0015-035%2C_Nikita_S._Chruschtschow.jpg?uselang=ru",
+    startDate: new Date("1894-04-15"),
+    endDate: new Date("1971-09-11"),
+    events: [
+      { name: "Event 1", date: new Date("2024-02-15") },
+      { name: "Event 2", date: new Date("2024-04-20") },
+    ],
   },
 };
