@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./TimeSpanBar.css";
+import classes from "./TimeSpanBar.module.css";
 
 type TimeSpanBarProps = {
   startDate: Date;
@@ -21,32 +21,23 @@ const TimeSpanBar = ({
   image,
 }: TimeSpanBarProps) => {
   return (
-    <div className="time-span-bar">
-      <div className="time-span-bar__header">{header}</div>
-      <div className="time-span-bar__content">
-        <div className="time-span-bar__start-date">
-          <div className="time-span-bar__label">Дата рождения</div>
-          <div className="time-span-bar__date">
-            {startDate.toLocaleDateString()}
-          </div>
+    <div className={classes.component}>
+      <div className={classes.header}>{header}</div>
+      <div className={classes.content}>
+        <div className={classes.start}>
+          <div className={classes.label}>Дата рождения</div>
+          <div className={classes.date}>{startDate.toLocaleDateString()}</div>
         </div>
-        <img
-          width={64}
-          src={image}
-          alt={header}
-          className="time-span-bar__image"
-        />
-        <div className="time-span-bar__events">
+        <img width={64} src={image} alt={header} className={classes.image} />
+        <div className={classes.events}>
           {events.map((event) => (
-            <div className="time-span-bar__event">{event.name}</div>
+            <div className={classes.event}>{event.name}</div>
           ))}
         </div>
         {endDate && (
-          <div className="time-span-bar__end-date">
-            <div className="time-span-bar__label">Дата смерти</div>
-            <div className="time-span-bar__date">
-              {endDate.toLocaleDateString()}
-            </div>
+          <div className={classes.end}>
+            <div className={classes.label}>Дата смерти</div>
+            <div className={classes.date}>{endDate.toLocaleDateString()}</div>
           </div>
         )}
       </div>
