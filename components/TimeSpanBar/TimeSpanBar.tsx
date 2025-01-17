@@ -38,34 +38,31 @@ const TimeSpanBar = ({
 }: TimeSpanBarProps) => {
   return (
     <div className={classes.component}>
-      <div className={classes.header}>{header}</div>
-      <div className={classes.content}>
-        <div className={classes.start}>
-          <div className={classes.label}>Дата рождения</div>
-          <div className={classes.date}>{start.date.toLocaleDateString()}</div>
-        </div>
-        <img width={64} src={image} alt={header} className={classes.image} />
-        <div className={classes.events}>
-          {events.map((event) => (
-            <div className={classes.event}>
-              <div className={classes.eventDate}>
-                {event.info.date.toLocaleDateString()}
-              </div>
-              <div className={classes.eventName}>{event.name}</div>
-              <div className={classes.eventLocation}>
-                {event.info.location?.name}
-              </div>
-              <img width={64} src={event.info.image} alt={event.name} />
-            </div>
-          ))}
-        </div>
-        {end && (
-          <div className={classes.end}>
-            <div className={classes.label}>Дата смерти</div>
-            <div className={classes.date}>{end.date.toLocaleDateString()}</div>
-          </div>
-        )}
+      <h3 className={classes.header}>{header}</h3>
+      <div className={classes.start}>
+        <div className={classes.label}>Дата рождения</div>
+        <div className={classes.date}>{start.date.toLocaleDateString()}</div>
       </div>
+      <div className={classes.events}>
+        {events.map((event) => (
+          <div className={classes.event}>
+            <div className={classes.eventDate}>
+              {event.info.date.toLocaleDateString()}
+            </div>
+            <div className={classes.eventName}>{event.name}</div>
+            <div className={classes.eventLocation}>
+              {event.info.location?.name}
+            </div>
+            <img width={64} src={event.info.image} alt={event.name} />
+          </div>
+        ))}
+      </div>
+      {end && (
+        <div className={classes.end}>
+          <div className={classes.label}>Дата смерти</div>
+          <div className={classes.date}>{end.date.toLocaleDateString()}</div>
+        </div>
+      )}
     </div>
   );
 };

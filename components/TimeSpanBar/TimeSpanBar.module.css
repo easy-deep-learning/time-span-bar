@@ -2,32 +2,40 @@
   border: 1px solid #fae6c6;
   padding: 12px 16px;
   border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: 10em minmax(0, 10fr) 10em;
+  grid-template-rows: 1fr auto 1fr;
+  grid-template-areas:
+    "header header header"
+    "start content end"
+    "start events end";
 }
 
 .header {
   font-size: 16px;
   font-weight: 600;
+  grid-area: header;
 }
 
 .content {
   display: flex;
   flex-direction: row;
   gap: 8px;
+  grid-area: content;
 }
 
 .start {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  grid-area: start;
 }
 
 .end {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  grid-area: end;
 }
 
 .image {
@@ -47,8 +55,9 @@
 
 .events {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 4px;
+  align-items: center;
 }
 
 .event {
