@@ -4,6 +4,7 @@ import TimeHistory from "./TimeHistory";
 import {
   KHRUSHCHEV_LIFE_BAR,
   PINK_FLOYD_LIFE_BAR,
+  LEONID_BREZHNEV_LIFE_BAR,
 } from "../../utils/mocks/TimeSpanBar.mock";
 
 const meta: Meta<typeof TimeHistory> = {
@@ -20,7 +21,11 @@ type Story = StoryObj<typeof TimeHistory>;
 
 export const Default: Story = {
   args: {
-    historyItems: [{ ...KHRUSHCHEV_LIFE_BAR }, { ...PINK_FLOYD_LIFE_BAR }],
+    historyItems: [
+      { ...KHRUSHCHEV_LIFE_BAR },
+      { ...LEONID_BREZHNEV_LIFE_BAR },
+      { ...PINK_FLOYD_LIFE_BAR },
+    ],
     range: {
       start: new Date("1983-01-01"),
       end: new Date("2025-01-01"),
