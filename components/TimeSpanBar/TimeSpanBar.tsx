@@ -44,8 +44,8 @@ const TimeSpanBar = ({
         <div className={classes.date}>{start.date.toLocaleDateString()}</div>
       </div>
       <div className={classes.events}>
-        {events.map((event) => (
-          <div className={classes.event}>
+        {events.map((event, index) => (
+          <div className={classes.event} key={index}>
             <div className={classes.eventDate}>
               {event.info.date.toLocaleDateString()}
             </div>

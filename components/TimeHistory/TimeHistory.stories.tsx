@@ -27,7 +27,7 @@ export const Default: Story = {
       { ...PINK_FLOYD_LIFE_BAR },
     ],
     range: {
-      start: new Date("1983-01-01"),
+      start: new Date("1900-01-01"),
       end: new Date("2025-01-01"),
     },
   },
