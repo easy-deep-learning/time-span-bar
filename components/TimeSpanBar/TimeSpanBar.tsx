@@ -40,7 +40,7 @@ const TimeSpanBar = ({
     <div className={classes.component}>
       <h3 className={classes.header}>{header}</h3>
       <div className={classes.start}>
-        <div className={classes.label}>Дата рождения</div>
+        <div className={classes.label}></div>
         <div className={classes.date}>{start.date.toLocaleDateString()}</div>
       </div>
       <div className={classes.events}>
@@ -59,7 +59,7 @@ const TimeSpanBar = ({
       </div>
       {end && (
         <div className={classes.end}>
-          <div className={classes.label}>Дата смерти</div>
+          <div className={classes.label}></div>
           <div className={classes.date}>{end.date.toLocaleDateString()}</div>
         </div>
       )}

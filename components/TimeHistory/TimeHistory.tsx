@@ -14,8 +14,8 @@ export interface TimeHistoryProps {
 const TimeHistory = ({
   historyItems,
   range = {
-    start: new Date("1900-01-01"),
-    end: new Date("2025-01-01"),
+    start: new Date("1890-01-01"),
+    end: new Date(Date.now()),
   },
   stepInYears = 5,
 }: TimeHistoryProps) => {
@@ -38,19 +38,25 @@ const TimeHistory = ({
           </div>
         ))}
       </div>
-      {historyItems.map((item, index) => (
-        <div
-          className={classes.item}
-          key={index}
-          style={{
-            transform: `translateX(${
-              (item.start.date.getFullYear() - startYear) * yearWidth
-            }%)`,
-          }}
-        >
-          <TimeSpanBar {...item} />
-        </div>
-      ))}
+      <div className={classes.items}>
+        {historyItems.map((item, index) => (
+          <div
+            className={classes.item}
+            key={index}
+            style={{
+              left: `${
+                (item.start.date.getFullYear() - startYear) * yearWidth
+              }%`,
+              width: `${
+                yearWidth *
+                (item.end?.date?.getFullYear() - item.start.date.getFullYear())
+              }%`,
+            }}
+          >
+            <TimeSpanBar {...item} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

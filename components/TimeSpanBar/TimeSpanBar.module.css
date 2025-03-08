@@ -1,20 +1,20 @@
 .component {
   border: 1px solid #fae6c6;
-  padding: 12px 16px;
+  padding: 6px 3px;
   border-radius: 4px;
   display: grid;
-  grid-template-columns: 10em minmax(0, 10fr) 10em;
-  grid-template-rows: 1fr auto 1fr;
   grid-template-areas:
-    "header header header"
-    "start events end"
-    "start events end";
+    "start start"
+    "header header"
+    "events events"
+    "end end";
 }
 
 .header {
   font-size: 16px;
   font-weight: 600;
   grid-area: header;
+  margin: 0;
 }
 
 .content {
@@ -36,6 +36,7 @@
   flex-direction: column;
   gap: 4px;
   grid-area: end;
+  text-align: right;
 }
 
 .image {
@@ -58,6 +59,7 @@
   flex-direction: row;
   gap: 4px;
   align-items: center;
+  overflow: scroll;
 }
 
 .event {
