@@ -29,6 +29,14 @@ export interface TimeSpanBarProps {
   image: string;
 }
 
+const formatDate = (date: Date) => {
+  return date
+    .toLocaleDateString("en-CA", {
+      year: "numeric",
+    })
+    .replace(/-/g, ".");
+};
+
 const TimeSpanBar = ({
   start,
   end,
@@ -41,26 +49,31 @@ const TimeSpanBar = ({
       <h3 className={classes.header}>{header}</h3>
       <div className={classes.start}>
         <div className={classes.label}></div>
-        <div className={classes.date}>{start.date.toLocaleDateString()}</div>
+        <div className={classes.date}>{formatDate(start.date)}</div>
       </div>
       <div className={classes.events}>
         {events.map((event, index) => (
           <div className={classes.event} key={index}>
             <div className={classes.eventDate}>
-              {event.info.date.toLocaleDateString()}
+              {formatDate(event.info.date)}
             </div>
             <div className={classes.eventName}>{event.name}</div>
             <div className={classes.eventLocation}>
               {event.info.location?.name}
             </div>
-            <img width={64} src={event.info.image} alt={event.name} />
+            <img
+              className={classes.eventImage}
+              width={64}
+              src={event.info.image}
+              alt={event.name}
+            />
           </div>
         ))}
       </div>
       {end && (
         <div className={classes.end}>
           <div className={classes.label}></div>
-          <div className={classes.date}>{end.date.toLocaleDateString()}</div>
+          <div className={classes.date}>{formatDate(end.date)}</div>
         </div>
       )}
     </div>

@@ -30,6 +30,7 @@ const TimeHistory = ({
       <div className={classes.years}>
         {Array.from({ length: columnCount }, (_, index) => (
           <div
+            tabIndex={index}
             className={classes.year}
             style={{ width: `${columnWidth}%` }}
             key={index}
