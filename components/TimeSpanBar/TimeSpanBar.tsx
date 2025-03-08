@@ -8,7 +8,7 @@ type Location = {
   longitude: number;
 };
 
-type TimeSpanBarProps = {
+export interface TimeSpanBarProps {
   start: {
     date: Date;
     location?: Location;
@@ -27,7 +27,7 @@ type TimeSpanBarProps = {
   }[];
   header: string;
   image: string;
-};
+}
 
 const TimeSpanBar = ({
   start,
