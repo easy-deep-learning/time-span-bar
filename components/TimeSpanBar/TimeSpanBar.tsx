@@ -13,7 +13,7 @@ export interface TimeSpanBarProps {
     date: Date;
     location?: Location;
   };
-  end?: {
+  end: {
     date: Date;
     location?: Location;
   };

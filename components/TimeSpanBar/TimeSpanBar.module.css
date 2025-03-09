@@ -45,11 +45,6 @@
   padding: 4px 0;
 }
 
-.image {
-  width: 64px;
-  height: 64px;
-}
-
 .label {
   font-size: 14px;
   font-weight: 400;
@@ -101,7 +96,7 @@
 }
 
 .eventImage {
-  width: 100%;
+  width: 64px;
   object-fit: cover;
   box-sizing: border-box;
 }
