@@ -27,6 +27,7 @@ export interface TimeSpanBarProps {
   }[];
   header: string;
   image: string;
+  yearWidth: number;
 }
 
 const formatDate = (date: Date) => {
@@ -43,17 +44,30 @@ const TimeSpanBar = ({
   events,
   header,
   image,
+  yearWidth,
 }: TimeSpanBarProps) => {
+  const duration = end.date.getFullYear() - start.date.getFullYear();
+
   return (
     <div className={classes.component}>
-      <h3 className={classes.header}>{header}</h3>
-      <div className={classes.start}>
-        <div className={classes.label}></div>
-        <div className={classes.date}>{formatDate(start.date)}</div>
-      </div>
-      <div className={classes.events}>
+      <h3 className={classes.header}>
+        <div className={classes.start}>
+          <div className={classes.label}></div>
+          <div className={classes.date}>{formatDate(start.date)}</div>
+        </div>
+        {header}
+      </h3>
+      <div className={classes.events} style={{ width: duration * yearWidth }}>
         {events.map((event, index) => (
-          <div className={classes.event} key={index}>
+          <div
+            className={classes.event}
+            key={index}
+            style={{
+              left:
+                (event.info.date.getFullYear() - start.date.getFullYear()) *
+                yearWidth,
+            }}
+          >
             <div className={classes.eventDate}>
               {formatDate(event.info.date)}
             </div>

@@ -105,7 +105,7 @@ const TimeHistory = ({
                 }px`,
               }}
             >
-              <TimeSpanBar {...item} />
+              <TimeSpanBar {...item} yearWidth={yearWidth} />
             </div>
           ))}
         </div>
