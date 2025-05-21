@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import { TimeSpanBar } from "./TimeSpanBar";
 import { LEONID_BREZHNEV_LIFE_BAR } from "../../utils/mocks/TimeSpanBar.mock";
