@@ -1,19 +1,23 @@
 .component {
-  padding: 6px 12px;
-  display: grid;
   font-family: sans-serif;
-  grid-template-areas:
-    "header header"
-    "events events"
-    "end end";
+  position: relative;
+  height: 100px;
+  border: 1px solid red;
 }
 
 .header {
-  display: flex;
-  flex-direction: row;
   font-size: 16px;
   font-weight: 600;
-  grid-area: header;
+  margin: 0;
+  position: absolute;
+  left: -130px;
+  width: 120px;
+  text-align: right;
+}
+
+.headerText {
+  font-size: 16px;
+  font-weight: 600;
   margin: 0;
 }
 
@@ -21,25 +25,22 @@
   display: flex;
   flex-direction: row;
   gap: 8px;
-  grid-area: content;
 }
 
 .start {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  grid-area: start;
   font-weight: bold;
   font-size: 1.6em;
   padding: 4px 0;
-  text-align: left;
 }
 
 .end {
-  display: flex;
-  flex-direction: column;
+  position: absolute;
+  right: -60px;
+  top: 0;
   gap: 4px;
-  grid-area: end;
   text-align: right;
   font-weight: bold;
   font-size: 1.6em;
@@ -52,26 +53,20 @@
 }
 
 .date {
-  font-size: 0.6em;
+  font-size: 1em;
 }
 
 .events {
-  display: flex;
-  flex-direction: row;
-  gap: 4px;
-  align-items: top;
-  overflow: scroll;
-  height: 100px;
+  height: 80px;
 }
 
 .event {
-  box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.1);
   background-color: #fff;
-  height: 100px;
-  overflow-y: scroll;
   font-size: 0.5em;
-  min-width: 80px;
   position: absolute;
+  height: 80px;
+  overflow: hidden;
 }
 
 .eventDate {
@@ -80,12 +75,14 @@
   background-color: #e8feff;
   padding: 2px 4px;
   border-radius: 4px;
+  text-align: center;
 }
 
 .eventName {
   padding: 8px 4px;
   font-size: 0.6em;
   font-weight: 400;
+  height: 12px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -100,7 +97,8 @@
 }
 
 .eventImage {
-  width: 64px;
   object-fit: cover;
   box-sizing: border-box;
+  margin: 0 auto;
+  height: 53px;
 }

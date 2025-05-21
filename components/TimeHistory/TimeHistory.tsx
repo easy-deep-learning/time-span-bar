@@ -2,6 +2,12 @@ import { TimeSpanBarProps, TimeSpanBar } from "../TimeSpanBar/TimeSpanBar";
 import { useState, useCallback, useEffect } from "react";
 import classes from "./TimeHistory.module.css";
 
+/**
+ * Props for the TimeHistory component
+ * @param historyItems Array of TimeSpanBarProps objects representing timeline items to display
+ * @param visibleRange Optional date range to show initially. Defaults to 1961-1991
+ * @param stepInYears Optional step size in years for scrolling. Defaults to 1
+ */
 export interface TimeHistoryProps {
   historyItems: TimeSpanBarProps[];
   visibleRange?: {
@@ -14,7 +20,7 @@ export interface TimeHistoryProps {
 const TimeHistory = ({
   historyItems,
   visibleRange: initialVisibleRange = {
-    start: new Date("1961-01-01"),
+    start: new Date("1881-01-01"),
     end: new Date("1991-01-01"),
     // Наша эра :)
   },
@@ -26,43 +32,8 @@ const TimeHistory = ({
   const startYear = visibleRange.start.getFullYear();
   const yearWidth = 50; // px
 
-  const rangeStep = 5; // years
-
   return (
     <div className={classes.component}>
-      <div className={classes.controls}>
-        <button onClick={() => setVisibleRange(initialVisibleRange)}>
-          Reset
-        </button>
-        <button
-          onClick={() =>
-            setVisibleRange((prev) => ({
-              start: new Date(
-                prev.start.setFullYear(prev.start.getFullYear() - rangeStep)
-              ),
-              end: new Date(
-                prev.end.setFullYear(prev.end.getFullYear() - rangeStep)
-              ),
-            }))
-          }
-        >
-          {"<"} Back
-        </button>
-        <button
-          onClick={() =>
-            setVisibleRange((prev) => ({
-              start: new Date(
-                prev.start.setFullYear(prev.start.getFullYear() + rangeStep)
-              ),
-              end: new Date(
-                prev.end.setFullYear(prev.end.getFullYear() + rangeStep)
-              ),
-            }))
-          }
-        >
-          Forward {">"}
-        </button>
-      </div>
       <div className={classes.years}>
         {Array.from(
           {
@@ -88,27 +59,19 @@ const TimeHistory = ({
           {endYear}
         </div>
       </div>
-      <div className={classes.currentFrame}>
-        <div className={classes.items}>
-          {historyItems.map((item, index) => (
-            <div
-              className={classes.item}
-              key={index}
-              style={{
-                left: `${
-                  (item.start.date.getFullYear() - startYear) * yearWidth
-                }px`,
-                width: `${
-                  (item.end?.date?.getFullYear() -
-                    item.start.date.getFullYear()) *
-                  yearWidth
-                }px`,
-              }}
-            >
-              <TimeSpanBar {...item} yearWidth={yearWidth} />
-            </div>
-          ))}
-        </div>
+
+      <div className={classes.items}>
+        {historyItems.map((item, index) => (
+          <div
+            className={classes.item}
+            key={index}
+            style={{
+              left: (item.start.date.getFullYear() - startYear) * yearWidth,
+            }}
+          >
+            <TimeSpanBar {...item} yearWidth={yearWidth} />
+          </div>
+        ))}
       </div>
     </div>
   );

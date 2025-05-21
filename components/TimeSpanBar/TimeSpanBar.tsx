@@ -47,25 +47,31 @@ const TimeSpanBar = ({
   yearWidth,
 }: TimeSpanBarProps) => {
   const duration = end.date.getFullYear() - start.date.getFullYear();
+  const startYear = start.date.getFullYear();
 
   return (
-    <div className={classes.component}>
+    <div
+      className={classes.component}
+      style={{ width: (duration + 1) * yearWidth }}
+    >
       <h3 className={classes.header}>
         <div className={classes.start}>
           <div className={classes.label}></div>
           <div className={classes.date}>{formatDate(start.date)}</div>
         </div>
-        {header}
+        <div className={classes.headerText}>{header}</div>
       </h3>
-      <div className={classes.events} style={{ width: duration * yearWidth }}>
+      <div
+        className={classes.events}
+        style={{ width: (duration + 1) * yearWidth }}
+      >
         {events.map((event, index) => (
           <div
             className={classes.event}
             key={index}
             style={{
-              left:
-                (event.info.date.getFullYear() - start.date.getFullYear()) *
-                yearWidth,
+              left: (event.info.date.getFullYear() - startYear) * yearWidth,
+              width: yearWidth,
             }}
           >
             <div className={classes.eventDate}>

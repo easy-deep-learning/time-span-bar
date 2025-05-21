@@ -7,11 +7,6 @@
   height: 1000px;
 }
 
-.controls {
-  position: absolute;
-  height: 40px;
-}
-
 .years {
   display: flex;
   flex-direction: row;
@@ -25,6 +20,7 @@
 .year {
   height: 100%;
   border-right: 1px solid hwb(203 66% 0% / 0.78);
+  box-sizing: border-box;
   font-size: 10px;
   flex: 0 0 auto;
   text-align: center;
@@ -34,26 +30,12 @@
   background-color: #f0f0f0;
 }
 
-.currentFrame {
-  width: 100%;
-  overflow: hidden;
-  top: 100px;
-  position: relative;
-}
-
 .items {
-  margin: 20px 0;
+  position: absolute;
+  top: 60px;
 }
 
 .item {
-  background-color: white;
   margin: 6px 0;
   position: relative;
-  border-radius: 6px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-  opacity: 0.8;
-}
-
-.item:hover {
-  opacity: 1;
 }

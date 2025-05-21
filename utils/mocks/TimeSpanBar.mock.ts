@@ -22,6 +22,19 @@ export const KHRUSHCHEV_LIFE_BAR: TimeSpanBarProps = {
   },
   events: [
     {
+      name: "Early life",
+      info: {
+        date: new Date("1894-04-15"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/6/66/Kurskaja.jpg",
+        location: {
+          name: "Kalinovka",
+          latitude: 55.7558,
+          longitude: 37.6173,
+        },
+      },
+    },
+    {
       name: "Donbas years",
       info: {
         date: new Date("1916-02-15"),
