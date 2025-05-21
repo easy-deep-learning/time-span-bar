@@ -20,8 +20,8 @@ export interface TimeHistoryProps {
 const TimeHistory = ({
   historyItems,
   visibleRange: initialVisibleRange = {
-    start: new Date("1881-01-01"),
-    end: new Date("1991-01-01"),
+    start: new Date("1800-01-01"),
+    end: new Date("2026-01-01"),
     // Наша эра :)
   },
   stepInYears = 1,

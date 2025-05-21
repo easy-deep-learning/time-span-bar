@@ -27,7 +27,7 @@ export interface TimeSpanBarProps {
   }[];
   header: string;
   image: string;
-  yearWidth: number;
+  yearWidth?: number;
 }
 
 const formatDate = (date: Date) => {

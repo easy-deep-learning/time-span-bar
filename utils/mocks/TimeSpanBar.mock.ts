@@ -1,5 +1,391 @@
 import { TimeSpanBarProps } from "../../components/TimeSpanBar/TimeSpanBar";
 
+export const PINK_FLOYD_LIFE_BAR: TimeSpanBarProps = {
+  header: "Pink Floyd",
+  image: "https://en.wikipedia.org/wiki/File:Pink_Floyd_-_all_members.jpg",
+  start: {
+    date: new Date("1965-01-01"),
+  },
+  end: {
+    date: new Date("1985-01-01"),
+  },
+  events: [
+    {
+      name: "Formation",
+      info: {
+        date: new Date("1965-02-15"),
+        location: {
+          name: "London",
+          latitude: 51.5074,
+          longitude: -0.0799,
+        },
+        image:
+          "https://media.pitchfork.com/photos/592f53a09937e767378adf04/2:1/w_2240,c_limit/ea5185fb.jpg",
+      },
+    },
+    {
+      name: "A Saucerful of Secrets",
+      info: {
+        date: new Date("1968-02-15"),
+        location: {
+          name: "London",
+          latitude: 51.5074,
+          longitude: -0.0799,
+        },
+        image:
+          "https://upload.wikimedia.org/wikipedia/en/5/54/Saucerful_of_secrets2.jpg",
+      },
+    },
+    {
+      name: "The Dark Side of the Moon",
+      info: {
+        date: new Date("1973-03-01"),
+        location: {
+          name: "London",
+          latitude: 51.5074,
+          longitude: -0.0799,
+        },
+        image:
+          "https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png",
+      },
+    },
+    {
+      name: "Wish You Were Here",
+      info: {
+        date: new Date("1975-09-12"),
+        location: {
+          name: "London",
+          latitude: 51.5074,
+          longitude: -0.0799,
+        },
+        image:
+          "https://upload.wikimedia.org/wikipedia/en/8/8c/Wish_you_were_here_by_Pink_Floyd_banner.png",
+      },
+    },
+    {
+      name: "Animals",
+      info: {
+        date: new Date("1977-01-21"),
+        location: {
+          name: "London",
+          latitude: 51.5074,
+          longitude: -0.0799,
+        },
+        image:
+          "https://upload.wikimedia.org/wikipedia/en/7/74/Pink_Floyd-Animals-Frontal.jpg",
+      },
+    },
+    {
+      name: "The Wall",
+      info: {
+        date: new Date("1979-11-30"),
+        location: {
+          name: "London",
+          latitude: 51.5074,
+          longitude: -0.0799,
+        },
+        image:
+          "https://upload.wikimedia.org/wikipedia/en/thumb/1/13/PinkFloydWallCoverOriginalNoText.jpg/440px-PinkFloydWallCoverOriginalNoText.jpg",
+      },
+    },
+    {
+      name: "The Final Cut",
+      info: {
+        date: new Date("1983-03-21"),
+        location: {
+          name: "London",
+          latitude: 51.5074,
+          longitude: -0.0799,
+        },
+        image:
+          "https://upload.wikimedia.org/wikipedia/en/e/e4/FloydFC-Cover01.jpg",
+      },
+    },
+  ],
+};
+
+export const LENIN_LIFE_BAR: TimeSpanBarProps = {
+  header: "Ленин, Владимир Ильич",
+  image:
+    "https://upload.wikimedia.org/wikipedia/commons/0/08/Fligelhouse.JPG?uselang=ru",
+  start: {
+    date: new Date("1870-04-22"),
+    location: {
+      name: "Simbirsk",
+      latitude: 54.3167,
+      longitude: 48.3667,
+    },
+  },
+  end: {
+    date: new Date("1924-01-21"),
+    location: {
+      name: "Moscow",
+      latitude: 55.7558,
+      longitude: 37.6173,
+    },
+  },
+  events: [
+    {
+      name: "Early life in Simbirsk",
+      info: {
+        date: new Date("1870-04-22"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/7/7f/Lenin-circa-1887.jpg",
+        location: {
+          name: "Simbirsk",
+          latitude: 54.3167,
+          longitude: 48.3667,
+        },
+      },
+    },
+    {
+      name: "Execution of brother",
+      info: {
+        date: new Date("1887-05-20"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/d/dd/Oreshek_fortress_Ulyanov.jpg",
+        location: {
+          name: "Saint Petersburg",
+          latitude: 59.9343,
+          longitude: 30.3351,
+        },
+      },
+    },
+    {
+      name: "Exile to Siberia",
+      info: {
+        date: new Date("1897-02-13"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/9/90/Union-de-Lucha.jpg",
+        location: {
+          name: "Shushenskoye",
+          latitude: 53.325,
+          longitude: 91.9356,
+        },
+      },
+    },
+    {
+      name: "What Is To Be Done?",
+      info: {
+        date: new Date("1902-03-01"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/What_is_to_be_Done.jpg/1024px-What_is_to_be_Done.jpg",
+        location: {
+          name: "Munich",
+          latitude: 48.1351,
+          longitude: 11.582,
+        },
+      },
+    },
+    {
+      name: "Return to Russia",
+      info: {
+        date: new Date("1917-04-16"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Lenin_Sealed_Train_Map-en.svg/1280px-Lenin_Sealed_Train_Map-en.svg.png",
+        location: {
+          name: "Petrograd",
+          latitude: 59.9343,
+          longitude: 30.3351,
+        },
+      },
+    },
+    {
+      name: "October Revolution",
+      info: {
+        date: new Date("1917-11-07"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Brodskiy%27s_Lenin.jpg/1024px-Brodskiy%27s_Lenin.jpg",
+        location: {
+          name: "Petrograd",
+          latitude: 59.9343,
+          longitude: 30.3351,
+        },
+      },
+    },
+    {
+      name: "New Economic Policy",
+      info: {
+        date: new Date("1921-03-21"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/8/87/Chervonetz_1922.jpg",
+        location: {
+          name: "Moscow",
+          latitude: 55.7558,
+          longitude: 37.6173,
+        },
+      },
+    },
+    {
+      name: "Death and funeral",
+      info: {
+        date: new Date("1924-01-21"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Lenin%27s_funerals_by_I.Brodsky_%281925%29_detail_01.jpg/1920px-Lenin%27s_funerals_by_I.Brodsky_%281925%29_detail_01.jpg",
+        location: {
+          name: "Moscow",
+          latitude: 55.7558,
+          longitude: 37.6173,
+        },
+      },
+    },
+  ],
+};
+
+export const STALIN_LIFE_BAR: TimeSpanBarProps = {
+  header: "Сталин, Иосиф Виссарионович",
+  image:
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Stalin_1920-1.jpg/1024px-Stalin_1920-1.jpg",
+  start: {
+    date: new Date("1878-12-18"),
+    location: {
+      name: "Gori",
+      latitude: 41.9842,
+      longitude: 44.1158,
+    },
+  },
+  end: {
+    date: new Date("1953-03-05"),
+    location: {
+      name: "Moscow",
+      latitude: 55.7558,
+      longitude: 37.6173,
+    },
+  },
+  events: [
+    {
+      name: "Birth and early life",
+      info: {
+        date: new Date("1878-12-18"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Stalin_house_museum_in_Gori.jpg/800px-Stalin_house_museum_in_Gori.jpg",
+        location: {
+          name: "Gori",
+          latitude: 41.9842,
+          longitude: 44.1158,
+        },
+      },
+    },
+    {
+      name: "Tiflis Seminary",
+      info: {
+        date: new Date("1894-09-01"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Tbilisi_Spiritual_Seminary.jpg/1024px-Tbilisi_Spiritual_Seminary.jpg",
+        location: {
+          name: "Tbilisi",
+          latitude: 41.7151,
+          longitude: 44.8271,
+        },
+      },
+    },
+    {
+      name: "First arrest",
+      info: {
+        date: new Date("1902-04-05"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Batumi_prison.jpg/1024px-Batumi_prison.jpg",
+        location: {
+          name: "Batumi",
+          latitude: 41.6458,
+          longitude: 41.6417,
+        },
+      },
+    },
+    {
+      name: "October Revolution",
+      info: {
+        date: new Date("1917-11-07"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Stalin_1917.jpg/1024px-Stalin_1917.jpg",
+        location: {
+          name: "Petrograd",
+          latitude: 59.9343,
+          longitude: 30.3351,
+        },
+      },
+    },
+    {
+      name: "General Secretary",
+      info: {
+        date: new Date("1922-04-03"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Stalin_1922.jpg/1024px-Stalin_1922.jpg",
+        location: {
+          name: "Moscow",
+          latitude: 55.7558,
+          longitude: 37.6173,
+        },
+      },
+    },
+    {
+      name: "First Five-Year Plan",
+      info: {
+        date: new Date("1928-10-01"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Magnitogorsk_steel_plant.jpg/1024px-Magnitogorsk_steel_plant.jpg",
+        location: {
+          name: "Moscow",
+          latitude: 55.7558,
+          longitude: 37.6173,
+        },
+      },
+    },
+    {
+      name: "Great Patriotic War",
+      info: {
+        date: new Date("1941-06-22"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Stalin_1943.jpg/1024px-Stalin_1943.jpg",
+        location: {
+          name: "Moscow",
+          latitude: 55.7558,
+          longitude: 37.6173,
+        },
+      },
+    },
+    {
+      name: "Victory Parade",
+      info: {
+        date: new Date("1945-06-24"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Victory_Parade_1945.jpg/1024px-Victory_Parade_1945.jpg",
+        location: {
+          name: "Moscow",
+          latitude: 55.7558,
+          longitude: 37.6173,
+        },
+      },
+    },
+    {
+      name: "Last public appearance",
+      info: {
+        date: new Date("1952-10-14"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Stalin_1952.jpg/1024px-Stalin_1952.jpg",
+        location: {
+          name: "Moscow",
+          latitude: 55.7558,
+          longitude: 37.6173,
+        },
+      },
+    },
+    {
+      name: "Death and funeral",
+      info: {
+        date: new Date("1953-03-05"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Stalin_funeral.jpg/1024px-Stalin_funeral.jpg",
+        location: {
+          name: "Moscow",
+          latitude: 55.7558,
+          longitude: 37.6173,
+        },
+      },
+    },
+  ],
+};
+
 export const KHRUSHCHEV_LIFE_BAR: TimeSpanBarProps = {
   header: "Хрущёв, Никита Сергеевич",
   image:
@@ -311,105 +697,537 @@ export const LEONID_BREZHNEV_LIFE_BAR: TimeSpanBarProps = {
   ],
 };
 
-export const PINK_FLOYD_LIFE_BAR: TimeSpanBarProps = {
-  header: "Pink Floyd",
-  image: "https://en.wikipedia.org/wiki/File:Pink_Floyd_-_all_members.jpg",
+export const GORBACHEV_LIFE_BAR: TimeSpanBarProps = {
+  header: "Горбачёв, Михаил Сергеевич",
+  image:
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Mikhail_Gorbachev_1987.jpg/1024px-Mikhail_Gorbachev_1987.jpg",
   start: {
-    date: new Date("1965-01-01"),
+    date: new Date("1931-03-02"),
+    location: {
+      name: "Privolnoe",
+      latitude: 45.9167,
+      longitude: 41.5833,
+    },
   },
   end: {
-    date: new Date("1985-01-01"),
+    date: new Date("2022-08-30"),
+    location: {
+      name: "Moscow",
+      latitude: 55.7558,
+      longitude: 37.6173,
+    },
   },
   events: [
     {
-      name: "Formation",
+      name: "Birth and early life",
       info: {
-        date: new Date("1965-02-15"),
-        location: {
-          name: "London",
-          latitude: 51.5074,
-          longitude: -0.0799,
-        },
+        date: new Date("1931-03-02"),
         image:
-          "https://media.pitchfork.com/photos/592f53a09937e767378adf04/2:1/w_2240,c_limit/ea5185fb.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Gorbachev_birthplace.jpg/1024px-Gorbachev_birthplace.jpg",
+        location: {
+          name: "Privolnoe",
+          latitude: 45.9167,
+          longitude: 41.5833,
+        },
       },
     },
     {
-      name: "A Saucerful of Secrets",
+      name: "Moscow State University",
       info: {
-        date: new Date("1968-02-15"),
-        location: {
-          name: "London",
-          latitude: 51.5074,
-          longitude: -0.0799,
-        },
+        date: new Date("1950-09-01"),
         image:
-          "https://upload.wikimedia.org/wikipedia/en/5/54/Saucerful_of_secrets2.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Moscow_State_University_main_building.jpg/1024px-Moscow_State_University_main_building.jpg",
+        location: {
+          name: "Moscow",
+          latitude: 55.7558,
+          longitude: 37.6173,
+        },
       },
     },
     {
-      name: "The Dark Side of the Moon",
+      name: "General Secretary",
       info: {
-        date: new Date("1973-03-01"),
-        location: {
-          name: "London",
-          latitude: 51.5074,
-          longitude: -0.0799,
-        },
+        date: new Date("1985-03-11"),
         image:
-          "https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Mikhail_Gorbachev_1987.jpg/1024px-Mikhail_Gorbachev_1987.jpg",
+        location: {
+          name: "Moscow",
+          latitude: 55.7558,
+          longitude: 37.6173,
+        },
       },
     },
     {
-      name: "Wish You Were Here",
+      name: "Perestroika",
       info: {
-        date: new Date("1975-09-12"),
-        location: {
-          name: "London",
-          latitude: 51.5074,
-          longitude: -0.0799,
-        },
+        date: new Date("1986-02-25"),
         image:
-          "https://upload.wikimedia.org/wikipedia/en/8/8c/Wish_you_were_here_by_Pink_Floyd_banner.png",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Perestroika_1986.jpg/1024px-Perestroika_1986.jpg",
+        location: {
+          name: "Moscow",
+          latitude: 55.7558,
+          longitude: 37.6173,
+        },
       },
     },
     {
-      name: "Animals",
+      name: "Chernobyl disaster",
       info: {
-        date: new Date("1977-01-21"),
-        location: {
-          name: "London",
-          latitude: 51.5074,
-          longitude: -0.0799,
-        },
+        date: new Date("1986-04-26"),
         image:
-          "https://upload.wikimedia.org/wikipedia/en/7/74/Pink_Floyd-Animals-Frontal.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Chernobyl_reactor_after_disaster.jpg/1024px-Chernobyl_reactor_after_disaster.jpg",
+        location: {
+          name: "Chernobyl",
+          latitude: 51.389,
+          longitude: 30.0994,
+        },
       },
     },
     {
-      name: "The Wall",
+      name: "Fall of Berlin Wall",
       info: {
-        date: new Date("1979-11-30"),
-        location: {
-          name: "London",
-          latitude: 51.5074,
-          longitude: -0.0799,
-        },
+        date: new Date("1989-11-09"),
         image:
-          "https://upload.wikimedia.org/wikipedia/en/thumb/1/13/PinkFloydWallCoverOriginalNoText.jpg/440px-PinkFloydWallCoverOriginalNoText.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Berlin_Wall_1989.jpg/1024px-Berlin_Wall_1989.jpg",
+        location: {
+          name: "Berlin",
+          latitude: 52.52,
+          longitude: 13.405,
+        },
       },
     },
     {
-      name: "The Final Cut",
+      name: "Dissolution of USSR",
       info: {
-        date: new Date("1983-03-21"),
-        location: {
-          name: "London",
-          latitude: 51.5074,
-          longitude: -0.0799,
-        },
+        date: new Date("1991-12-26"),
         image:
-          "https://upload.wikimedia.org/wikipedia/en/e/e4/FloydFC-Cover01.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Soviet_Union_flag_lowering.jpg/1024px-Soviet_Union_flag_lowering.jpg",
+        location: {
+          name: "Moscow",
+          latitude: 55.7558,
+          longitude: 37.6173,
+        },
+      },
+    },
+    {
+      name: "Death",
+      info: {
+        date: new Date("2022-08-30"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Mikhail_Gorbachev_2019.jpg/1024px-Mikhail_Gorbachev_2019.jpg",
+        location: {
+          name: "Moscow",
+          latitude: 55.7558,
+          longitude: 37.6173,
+        },
+      },
+    },
+  ],
+};
+
+export const ANDROPOV_LIFE_BAR: TimeSpanBarProps = {
+  header: "Андропов, Юрий Владимирович",
+  image:
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Yuri_Andropov_1983.jpg/1024px-Yuri_Andropov_1983.jpg",
+  start: {
+    date: new Date("1914-06-15"),
+    location: {
+      name: "Nagutskoye",
+      latitude: 44.4417,
+      longitude: 43.8833,
+    },
+  },
+  end: {
+    date: new Date("1984-02-09"),
+    location: {
+      name: "Moscow",
+      latitude: 55.7558,
+      longitude: 37.6173,
+    },
+  },
+  events: [
+    {
+      name: "Birth",
+      info: {
+        date: new Date("1914-06-15"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Yuri_Andropov_young.jpg/1024px-Yuri_Andropov_young.jpg",
+        location: {
+          name: "Nagutskoye",
+          latitude: 44.4417,
+          longitude: 43.8833,
+        },
+      },
+    },
+    {
+      name: "Komsomol work",
+      info: {
+        date: new Date("1936-01-01"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Komsomol_badge.jpg/1024px-Komsomol_badge.jpg",
+        location: {
+          name: "Yaroslavl",
+          latitude: 57.6261,
+          longitude: 39.8875,
+        },
+      },
+    },
+    {
+      name: "Hungarian Revolution",
+      info: {
+        date: new Date("1956-10-23"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Hungarian_Revolution_1956.jpg/1024px-Hungarian_Revolution_1956.jpg",
+        location: {
+          name: "Budapest",
+          latitude: 47.4979,
+          longitude: 19.0402,
+        },
+      },
+    },
+    {
+      name: "KGB Chairman",
+      info: {
+        date: new Date("1967-05-18"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/KGB_badge.jpg/1024px-KGB_badge.jpg",
+        location: {
+          name: "Moscow",
+          latitude: 55.7558,
+          longitude: 37.6173,
+        },
+      },
+    },
+    {
+      name: "General Secretary",
+      info: {
+        date: new Date("1982-11-12"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Yuri_Andropov_1983.jpg/1024px-Yuri_Andropov_1983.jpg",
+        location: {
+          name: "Moscow",
+          latitude: 55.7558,
+          longitude: 37.6173,
+        },
+      },
+    },
+    {
+      name: "Death",
+      info: {
+        date: new Date("1984-02-09"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Andropov_funeral.jpg/1024px-Andropov_funeral.jpg",
+        location: {
+          name: "Moscow",
+          latitude: 55.7558,
+          longitude: 37.6173,
+        },
+      },
+    },
+  ],
+};
+
+export const CHERNENKO_LIFE_BAR: TimeSpanBarProps = {
+  header: "Черненко, Константин Устинович",
+  image:
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Konstantin_Chernenko_1984.jpg/1024px-Konstantin_Chernenko_1984.jpg",
+  start: {
+    date: new Date("1911-09-24"),
+    location: {
+      name: "Bolshaya Tes",
+      latitude: 53.7167,
+      longitude: 92.4333,
+    },
+  },
+  end: {
+    date: new Date("1985-03-10"),
+    location: {
+      name: "Moscow",
+      latitude: 55.7558,
+      longitude: 37.6173,
+    },
+  },
+  events: [
+    {
+      name: "Birth and early life",
+      info: {
+        date: new Date("1911-09-24"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Konstantin_Chernenko_young.jpg/1024px-Konstantin_Chernenko_young.jpg",
+        location: {
+          name: "Bolshaya Tes",
+          latitude: 53.7167,
+          longitude: 92.4333,
+        },
+      },
+    },
+    {
+      name: "Komsomol work",
+      info: {
+        date: new Date("1930-01-01"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Komsomol_badge.jpg/1024px-Komsomol_badge.jpg",
+        location: {
+          name: "Krasnoyarsk",
+          latitude: 56.0087,
+          longitude: 92.8707,
+        },
+      },
+    },
+    {
+      name: "Party work in Moldova",
+      info: {
+        date: new Date("1948-01-01"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Chisinau_1950s.jpg/1024px-Chisinau_1950s.jpg",
+        location: {
+          name: "Chisinau",
+          latitude: 47.0105,
+          longitude: 28.8638,
+        },
+      },
+    },
+    {
+      name: "Central Committee Secretary",
+      info: {
+        date: new Date("1976-03-05"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Chernenko_1976.jpg/1024px-Chernenko_1976.jpg",
+        location: {
+          name: "Moscow",
+          latitude: 55.7558,
+          longitude: 37.6173,
+        },
+      },
+    },
+    {
+      name: "General Secretary",
+      info: {
+        date: new Date("1984-02-13"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Konstantin_Chernenko_1984.jpg/1024px-Konstantin_Chernenko_1984.jpg",
+        location: {
+          name: "Moscow",
+          latitude: 55.7558,
+          longitude: 37.6173,
+        },
+      },
+    },
+    {
+      name: "Death",
+      info: {
+        date: new Date("1985-03-10"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Chernenko_funeral.jpg/1024px-Chernenko_funeral.jpg",
+        location: {
+          name: "Moscow",
+          latitude: 55.7558,
+          longitude: 37.6173,
+        },
+      },
+    },
+  ],
+};
+
+export const YELTSIN_LIFE_BAR: TimeSpanBarProps = {
+  header: "Ельцин, Борис Николаевич",
+  image:
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Boris_Yeltsin_1997.jpg/1024px-Boris_Yeltsin_1997.jpg",
+  start: {
+    date: new Date("1931-02-01"),
+    location: {
+      name: "Butka",
+      latitude: 56.7167,
+      longitude: 63.7833,
+    },
+  },
+  end: {
+    date: new Date("2007-04-23"),
+    location: {
+      name: "Moscow",
+      latitude: 55.7558,
+      longitude: 37.6173,
+    },
+  },
+  events: [
+    {
+      name: "Birth",
+      info: {
+        date: new Date("1931-02-01"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Yeltsin_birthplace.jpg/1024px-Yeltsin_birthplace.jpg",
+        location: {
+          name: "Butka",
+          latitude: 56.7167,
+          longitude: 63.7833,
+        },
+      },
+    },
+    {
+      name: "Moscow State University",
+      info: {
+        date: new Date("1955-01-01"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Moscow_State_University_main_building.jpg/1024px-Moscow_State_University_main_building.jpg",
+        location: {
+          name: "Moscow",
+          latitude: 55.7558,
+          longitude: 37.6173,
+        },
+      },
+    },
+    {
+      name: "First Secretary of Moscow",
+      info: {
+        date: new Date("1985-12-24"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Yeltsin_1985.jpg/1024px-Yeltsin_1985.jpg",
+        location: {
+          name: "Moscow",
+          latitude: 55.7558,
+          longitude: 37.6173,
+        },
+      },
+    },
+    {
+      name: "President of Russia",
+      info: {
+        date: new Date("1991-07-10"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Yeltsin_1991.jpg/1024px-Yeltsin_1991.jpg",
+        location: {
+          name: "Moscow",
+          latitude: 55.7558,
+          longitude: 37.6173,
+        },
+      },
+    },
+    {
+      name: "Constitutional Crisis",
+      info: {
+        date: new Date("1993-10-04"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/White_House_Moscow_1993.jpg/1024px-White_House_Moscow_1993.jpg",
+        location: {
+          name: "Moscow",
+          latitude: 55.7558,
+          longitude: 37.6173,
+        },
+      },
+    },
+    {
+      name: "Resignation",
+      info: {
+        date: new Date("1999-12-31"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Yeltsin_resignation.jpg/1024px-Yeltsin_resignation.jpg",
+        location: {
+          name: "Moscow",
+          latitude: 55.7558,
+          longitude: 37.6173,
+        },
+      },
+    },
+    {
+      name: "Death",
+      info: {
+        date: new Date("2007-04-23"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Yeltsin_funeral.jpg/1024px-Yeltsin_funeral.jpg",
+        location: {
+          name: "Moscow",
+          latitude: 55.7558,
+          longitude: 37.6173,
+        },
+      },
+    },
+  ],
+};
+
+export const PUTIN_LIFE_BAR: TimeSpanBarProps = {
+  header: "Путин, Владимир Владимирович",
+  image:
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Vladimir_Putin_%282020-02-20%29.jpg/1024px-Vladimir_Putin_%282020-02-20%29.jpg",
+  start: {
+    date: new Date("1952-10-07"),
+    location: {
+      name: "Leningrad",
+      latitude: 59.9343,
+      longitude: 30.3351,
+    },
+  },
+  end: {
+    date: new Date(),
+    location: {
+      name: "Moscow",
+      latitude: 55.7558,
+      longitude: 37.6173,
+    },
+  },
+  events: [
+    {
+      name: "Birth and early life",
+      info: {
+        date: new Date("1952-10-07"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Vladimir_Putin_young.jpg/1024px-Vladimir_Putin_young.jpg",
+        location: {
+          name: "Leningrad",
+          latitude: 59.9343,
+          longitude: 30.3351,
+        },
+      },
+    },
+    {
+      name: "KGB service",
+      info: {
+        date: new Date("1975-08-01"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/KGB_badge.jpg/1024px-KGB_badge.jpg",
+        location: {
+          name: "Leningrad",
+          latitude: 59.9343,
+          longitude: 30.3351,
+        },
+      },
+    },
+    {
+      name: "First term as President",
+      info: {
+        date: new Date("2000-05-07"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Vladimir_Putin_2000.jpg/1024px-Vladimir_Putin_2000.jpg",
+        location: {
+          name: "Moscow",
+          latitude: 55.7558,
+          longitude: 37.6173,
+        },
+      },
+    },
+    {
+      name: "Sochi Olympics",
+      info: {
+        date: new Date("2014-02-07"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Sochi_Olympics_2014.jpg/1024px-Sochi_Olympics_2014.jpg",
+        location: {
+          name: "Sochi",
+          latitude: 43.6028,
+          longitude: 39.7342,
+        },
+      },
+    },
+    {
+      name: "Special Military Operation",
+      info: {
+        date: new Date("2022-02-24"),
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Vladimir_Putin_2022.jpg/1024px-Vladimir_Putin_2022.jpg",
+        location: {
+          name: "Moscow",
+          latitude: 55.7558,
+          longitude: 37.6173,
+        },
       },
     },
   ],
